@@ -2,6 +2,7 @@ package main
 
 import (
   "flag"
+  "log"
   "net/http"
    
   "github.com/golang/glog"
@@ -24,6 +25,7 @@ func run() error {
   mux := runtime.NewServeMux()
   opts := []grpc.DialOption{grpc.WithInsecure()}
   err := gw.RegisterGreeterHandlerFromEndpoint(ctx, mux, *echoEndpoint, opts)
+  log.Printf(*echoEndpoint)
   if err != nil {
     return err
   }

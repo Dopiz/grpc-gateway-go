@@ -26,8 +26,9 @@ import (
 	"log"
 	"net"
 
-	"google.golang.org/grpc"
 	pb "examples/helloworld"
+
+	"google.golang.org/grpc"
 )
 
 const (
@@ -45,9 +46,9 @@ func (s *server) SayHello(ctx context.Context, in *pb.HelloRequest) (*pb.HelloRe
 	return &pb.HelloReply{Message: "Hello " + in.GetName()}, nil
 }
 
-func (s *server) SayHelloAgain(ctx context.Context, in *pb.HelloRequest) (*pb.HelloReply, error) {
+func (s *server) SayHelloAgain(ctx context.Context, in *pb.HelloAgainRequest) (*pb.HelloReply, error) {
 	log.Printf("Received: %v", in.GetName())
-	return &pb.HelloReply{Message: "Hello Again " + in.GetName()}, nil
+	return &pb.HelloReply{Message: "Hello " + in.GetName() + ", " + in.GetMessage()}, nil
 }
 
 func main() {

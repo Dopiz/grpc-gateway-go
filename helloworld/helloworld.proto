@@ -25,10 +25,15 @@ import "google/api/annotations.proto";
 // The greeting service definition.
 service Greeter {
   // Sends a greeting
-  rpc SayHello (HelloRequest) returns (HelloReply) {}
-  rpc SayHelloAgain (HelloRequest) returns (HelloReply) {
+  rpc SayHello (HelloRequest) returns (HelloReply) {
     option (google.api.http) = {
-      post: "/sayHelloAgain"
+      post: "/app/v1/SayHello"
+      body: "*"
+    };
+  }
+  rpc SayHelloAgain (HelloAgainRequest) returns (HelloReply) {
+    option (google.api.http) = {
+      post: "/app/v1/SayHelloAgain"
       body: "*"
     };
   }
@@ -37,6 +42,11 @@ service Greeter {
 // The request message containing the user's name.
 message HelloRequest {
   string name = 1;
+}
+// The request message containing the user's name & message.
+message HelloAgainRequest {
+  string name = 1;
+  string message = 2;
 }
 
 // The response message containing the greetings

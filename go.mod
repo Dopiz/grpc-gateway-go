@@ -13,6 +13,7 @@ require (
 	github.com/creack/pty v1.1.10 // indirect
 	github.com/envoyproxy/go-control-plane v0.9.5 // indirect
 	github.com/go-gl/glfw/v3.3/glfw v0.0.0-20200420212212-258d9bec320e // indirect
+	github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b
 	github.com/golang/mock v1.4.3
 	github.com/golang/protobuf v1.4.1
 	github.com/google/pprof v0.0.0-20200507031123-427632fa3b1c // indirect
@@ -29,7 +30,7 @@ require (
 	golang.org/x/exp v0.0.0-20200331195152-e8c3332aa8e5 // indirect
 	golang.org/x/image v0.0.0-20200430140353-33d19683fad8 // indirect
 	golang.org/x/mobile v0.0.0-20200329125638-4c31acba0007 // indirect
-	golang.org/x/net v0.0.0-20200506145744-7e3656a0809f // indirect
+	golang.org/x/net v0.0.0-20200506145744-7e3656a0809f
 	golang.org/x/sys v0.0.0-20200511232937-7e40ca221e25 // indirect
 	golang.org/x/time v0.0.0-20200416051211-89c76fbcd5d1 // indirect
 	golang.org/x/tools v0.0.0-20200512001501-aaeff5de670a // indirect
